@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#userBack" text="&lt;-" />
+                <Label alignment="CENTER" layoutX="135.0" layoutY="50.0" prefHeight="37.0" prefWidth="80.0" text="C19 TEST" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameField" accessibleText="Name" disable="true" editable="false" layoutX="125.0" layoutY="95.0" maxWidth="100.0" promptText="Name" />
+                <TextField fx:id="surnameField" accessibleText="Name" disable="true" editable="false" layoutX="125.0" layoutY="135.0" maxWidth="100.0" promptText="Surname" />
+                <TextField fx:id="passportField" accessibleText="Name" disable="true" editable="false" layoutX="125.0" layoutY="175.0" maxWidth="100.0" promptText="Passport no" />
+                <ComboBox fx:id="nationsList" disable="true" layoutX="125.0" layoutY="215.0" prefWidth="100.0" promptText="Nation" />
+                <TextField fx:id="emailField" accessibleText="Name" layoutX="125.0" layoutY="295.0" maxWidth="100.0" promptText="Email" />
+                <TextField fx:id="phoneField" accessibleText="Name" layoutX="125.0" layoutY="255.0" maxWidth="100.0" promptText="Phone" />
+                <Button fx:id="submitButton" layoutX="147.0" layoutY="375.0" mnemonicParsing="false" onAction="#editInfoButton" text="Submit" />
+                <ToggleButton fx:id="femaleButton" disable="true" layoutX="175.0" layoutY="332.0" onAction="#setGenderButton" prefWidth="50.0" text="Female">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                    </toggleGroup></ToggleButton>
+                <ToggleButton fx:id="maleButton" disable="true" layoutX="125.0" layoutY="332.0" onAction="#setGenderButton" prefWidth="50.0" text="Male" toggleGroup="$genderGroup">
+                    <font>
+                        <Font size="10.0" />
+                    </font></ToggleButton>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

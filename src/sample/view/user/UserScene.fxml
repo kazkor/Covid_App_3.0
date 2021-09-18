@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="135.0" layoutY="50.0" prefHeight="37.0" prefWidth="80.0" text="C19 TEST" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#goBack" text="&lt;-" />
+            <Button fx:id="selfDiagnose" layoutX="130.0" layoutY="120.0" mnemonicParsing="false" onAction="#diagnoseButton" prefHeight="45.0" prefWidth="89.0" text="Self diagnose" />
+            <Button fx:id="editButton" layoutX="130.0" layoutY="220.0" mnemonicParsing="false" onAction="#editUserData" prefWidth="89.0" text="Edit data" />
+            <Button fx:id="faqButton" layoutX="130.0" layoutY="300.0" mnemonicParsing="false" onAction="#faqScene" prefWidth="89.0" text="FAQ" />
+            <Button fx:id="callButton" layoutX="130.0" layoutY="340.0" mnemonicParsing="false" onAction="#callUs" prefWidth="89.0" text="Call us" />
+            <Button fx:id="reportsButton" layoutX="130.0" layoutY="180.0" mnemonicParsing="false" onAction="#seeReports" prefWidth="89.0" text="Reports" />
+            <Button fx:id="userStatsButton" layoutX="130.0" layoutY="260.0" mnemonicParsing="false" onAction="#showUserStats" prefWidth="89.0" text="Your stats" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

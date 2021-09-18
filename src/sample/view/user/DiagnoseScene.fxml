@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="CENTER" layoutX="135.0" layoutY="25.0" prefHeight="37.0" prefWidth="80.0" text="C19 TEST" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#userBack" text="&lt;-" />
+            <Label layoutX="125.0" layoutY="70.0" text="Temperature">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="120.0" text="Fever">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="170.0" text="Cough">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="270.0" text="Sore Throat">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="125.0" layoutY="220.0" text="Dyspnea">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="tempList" layoutX="125.0" layoutY="85.0" prefHeight="10.0" prefWidth="100.0" />
+            <ToggleButton fx:id="feverYes" layoutX="125.0" layoutY="135.0" mnemonicParsing="false" onAction="#setFeverGroupButton" prefHeight="0.0" prefWidth="50.0" text="Yes">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="feverGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="feverNo" layoutX="175.0" layoutY="135.0" mnemonicParsing="false" onAction="#setFeverGroupButton" prefHeight="15.0" prefWidth="50.0" text="No" toggleGroup="$feverGroup">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="coughYes" layoutX="125.0" layoutY="185.0" mnemonicParsing="false" onAction="#setCoughGroupButton" prefHeight="15.0" prefWidth="50.0" text="Yes">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="coughGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="coughNo" layoutX="175.0" layoutY="185.0" mnemonicParsing="false" onAction="#setCoughGroupButton" prefHeight="15.0" prefWidth="50.0" text="No" toggleGroup="$coughGroup">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="dyspneaYes" layoutX="125.0" layoutY="235.0" mnemonicParsing="false" onAction="#setDyspneaGroupButton" prefHeight="15.0" prefWidth="50.0" text="Yes">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="dyspneaGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="dyspneaNo" layoutX="175.0" layoutY="235.0" mnemonicParsing="false" onAction="#setDyspneaGroupButton" prefHeight="15.0" prefWidth="50.0" text="No" toggleGroup="$dyspneaGroup">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="soreYes" layoutX="125.0" layoutY="285.0" mnemonicParsing="false" onAction="#setSoreGroupButton" prefHeight="15.0" prefWidth="50.0" text="Yes">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="soreGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="soreNo" layoutX="175.0" layoutY="285.0" mnemonicParsing="false" onAction="#setSoreGroupButton" prefHeight="15.0" prefWidth="50.0" text="No" toggleGroup="$soreGroup">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </ToggleButton>
+            <TextArea fx:id="specificArea" layoutX="125.0" layoutY="330.0" prefHeight="58.0" prefWidth="100.0" wrapText="true" />
+            <Label layoutX="125.0" layoutY="315.0" text="Anything specific">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Button fx:id="submitDiagnoseButton" layoutX="125.0" layoutY="385.0" mnemonicParsing="false" onAction="#submitDiagnose" prefHeight="25.0" prefWidth="100.0" text="Submit" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

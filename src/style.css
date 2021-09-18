@@ -1,0 +1,19 @@
+.root{
+-fx-background-color: #ECECEC;
+-fx-text-fill: white;
+-fx-alignment: CENTER;
+}
+
+.button{
+-fx-background-color: #1D3F66;
+-fx-text-fill: white;
+-fx-alignment: CENTER;
+-fx-label-padding: 1,1,1,1;
+
+}
+
+.label{
+
+
+
+}
